@@ -16,6 +16,7 @@ public class Users {
     private String regNo;
     private String programId;
     private String school;
+    private AccountType accountType;
     private int yearOfStudy;
     private String email;
     private String password;
@@ -98,6 +99,14 @@ public class Users {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public AccountType getAccountType() {
+        return accountType;
+    }
+
+    public void setAccountType(AccountType accountType) {
+        this.accountType = accountType;
     }
 
 }
