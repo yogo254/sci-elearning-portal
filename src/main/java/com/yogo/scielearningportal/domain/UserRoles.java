@@ -11,6 +11,7 @@ public class UserRoles {
     private String id;
     private String userId;
     private String role;
+    private String assignedBy;
     private Date timestamp;
 
     public String getId() {
@@ -43,6 +44,14 @@ public class UserRoles {
 
     public void setTimestamp(Date timestamp) {
         this.timestamp = timestamp;
+    }
+
+    public String getAssignedBy() {
+        return assignedBy;
+    }
+
+    public void setAssignedBy(String assignedBy) {
+        this.assignedBy = assignedBy;
     }
 
 }

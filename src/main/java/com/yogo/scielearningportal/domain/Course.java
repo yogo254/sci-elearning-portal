@@ -1,5 +1,7 @@
 package com.yogo.scielearningportal.domain;
 
+import java.util.Date;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -13,6 +15,7 @@ public class Course {
     private int duration;
     private String department;
     private String school;
+    private Date timestamp;
 
     public String getId() {
         return id;
@@ -68,6 +71,14 @@ public class Course {
 
     public void setSchool(String school) {
         this.school = school;
+    }
+
+    public Date getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(Date timestamp) {
+        this.timestamp = timestamp;
     }
 
 }

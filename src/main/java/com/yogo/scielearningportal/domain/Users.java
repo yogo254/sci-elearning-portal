@@ -1,5 +1,8 @@
 package com.yogo.scielearningportal.domain;
 
+import java.util.Date;
+import java.util.List;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -14,12 +17,14 @@ public class Users {
     private String surname;
     private String lastname;
     private String regNo;
-    private String programId;
+    private String courseId;
+    private List<String> roles;
     private String school;
     private AccountType accountType;
     private int yearOfStudy;
     private String email;
     private String password;
+    private Date timestamp;
 
     public String getId() {
         return id;
@@ -61,14 +66,6 @@ public class Users {
         this.regNo = regNo;
     }
 
-    public String getProgramId() {
-        return programId;
-    }
-
-    public void setProgramId(String programId) {
-        this.programId = programId;
-    }
-
     public String getSchool() {
         return school;
     }
@@ -107,6 +104,30 @@ public class Users {
 
     public void setAccountType(AccountType accountType) {
         this.accountType = accountType;
+    }
+
+    public Date getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(Date timestamp) {
+        this.timestamp = timestamp;
+    }
+
+    public List<String> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<String> roles) {
+        this.roles = roles;
+    }
+
+    public String getCourseId() {
+        return courseId;
+    }
+
+    public void setCourseId(String courseId) {
+        this.courseId = courseId;
     }
 
 }
